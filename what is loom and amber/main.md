@@ -54,10 +54,52 @@ OpenJDK Community，简单翻译一下，其实就是OpenJDK社区，它主要�
 
 那最后做个总结的话其实就是，就目前大家使用的情况来看，由OpenJDK Community领导的OpenJDK Project是Java SE的官方参考实现。重点是它只产生OpenJDK的源码，并不提供可以直接使用的二进制文件。现在大家能使用的二进制文件的JDK则是各个组织自己编译之后的产物。OpenJDK官网指向的二进制文件的下载地址，实际上是Oracle的OpenJDK builds的下载地址。而Oracle JDK则只提供二进制文件，不提供源码，毕竟人家有自己的私有实现。
 
+![Coffee bean](img/difference.jpg)
+
 那接下来我们要介绍的Loom以及Amber呢，就是我之前提到的OpenJDK Community所有的几十个项目中的两个我觉得比较有意思的项目，拿出来和大家分享一下。
 
 ## Amber是什么
 
+Project Amber呢，官方的说法是，旨在为JDK提供一些小的改动，使开发者在开发的过程中更为友好。其实用比较人话来解释这个项目就是，语法糖。
 
+众所周知呢，Java的代码呢写起来其实是有点啰嗦的。那有没有办法能让大家开发的过程更加快乐一点呢，其实Amber就是来做这件事情的。我来举几个Amber已经反哺到正式发行版中的小语法糖。
+
++ var
+
+使用Lombok的我们应该会知道，Lombok提供了一个叫做val的东西，方便大家写代码
+
+``` java
+
+//没有val时我们的代码
+List<String> example = new ArrayList<>();
+
+//有了val时我们的代码
+val example = new ArrayList<String>();
+
+```
+而在这种场景下var的功能其实和Lombok提供的val差不多
+
+```java
+var example = new ArrayList<String>();
+```
+
+在我们任何想要使用局部变量的地方我们都可以使用var这个关键词，只要这个值是明确的。
+
+但是var这个词又有一个比较难搞的地方，因为它自身其实并不是java的保留字。它其实是一个比较特殊的类型，但是你甚至又能将它用于变量和方法的命名，所以你可以写出以下代码并通过编译：
+
+``` java
+  public static void main(String[] args) {
+    var example = new ArrayList<String>();
+    var var = var();
+    System.out.println(example);
+    System.out.println(var);
+    System.out.println(var());
+  }
+
+  public static int var(){
+    return 1;
+  }
+
+```
 
 ## Loom又是什么
