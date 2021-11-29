@@ -1,19 +1,18 @@
 # 什么是 Amber
 
-
 <!-- vim-markdown-toc GFM -->
 
-* [jdk 是什么，OpenJDK 又是什么](#jdk-是什么openjdk-又是什么)
-  * [OracleJDK](#oraclejdk)
-  * [OpenJDK](#openjdk)
-  * [OpenJDK Community](#openjdk-community)
-* [Amber 是什么](#amber-是什么)
+- [jdk 是什么，OpenJDK 又是什么](#jdk-是什么openjdk-又是什么)
+  - [OracleJDK](#oraclejdk)
+  - [OpenJDK](#openjdk)
+  - [OpenJDK Community](#openjdk-community)
+- [Amber 是什么](#amber-是什么)
 
 <!-- vim-markdown-toc -->
 
-Loom 和 Amber，是目前 OpenJDK 项目组重点关注的几个项目之一（其余的还有如 Valhalla，JMC-OpenJDK Mission Control 等）。
+Amber，是目前 OpenJDK 项目组重点关注的几个项目之一（其余的还有如 Valhalla，JMC-OpenJDK Mission Control 等）。
 
-在介绍今天的主角 Loom 和 Amber 之前呢，我想要先介绍一下 OpenJDK。
+在介绍今天的主角 Amber 之前呢，我想要先介绍一下 OpenJDK。
 
 ## jdk 是什么，OpenJDK 又是什么
 
@@ -343,6 +342,5 @@ privite String gender;
   目标 jdk18 发布的一个新功能，目标就是在之前我提到的那个增强模式匹配以及增强的 switch 的基础上进行再增强，但是官方的字太多了我还没来得及看。这里我也暂时贴一下文档，之后有时间我会再进行补全。
 
   [JEP 420](https://openjdk.java.net/jeps/420)
-
 
 那么今天的分享就到此结束，感谢大家的关注，谢谢！
