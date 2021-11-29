@@ -10,7 +10,7 @@
 
 <!-- vim-markdown-toc -->
 
-Amber，是目前 OpenJDK 项目组重点关注的几个项目之一（其余的还有如 Valhalla，JMC-OpenJDK Mission Control 等）。
+[Amber](https://github.com/openjdk/amber)，是目前 OpenJDK 项目组重点关注的几个项目之一（其余的还有如 Loom，Valhalla，JMC-OpenJDK Mission Control 等）。
 
 在介绍今天的主角 Amber 之前呢，我想要先介绍一下 OpenJDK。
 
@@ -28,7 +28,7 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
 
 ### OracleJDK
 
-OracleJDK，早称 SunJDK，从名字其实也比较容易看出来，最早的 jdk 呢就是 sun 公司开发的，所以叫 SunJDK，当然啊，更早的时候是叫 oak 的。之后 sun 被 oracle 公司收购了（2009），于是 SunJDK 也随之改名叫做 OracleJDK 了。相信呢，大家都是对这个 OracleJDK 还是挺熟悉的。那接下来我就来介绍一下这个 OpenJDK 到底是个什么东西。
+OracleJDK，早称 SunJDK，从名字其实也比较容易看出来，最早的 JDK 呢就是 Sun 公司开发的，所以叫 SunJDK，当然啊，更早的时候是叫 oak 的。之后 sun 被 oracle 公司收购了（2009），于是 SunJDK 也随之改名叫做 OracleJDK 了。相信呢，大家都是对这个 OracleJDK 还是挺熟悉的。那接下来我就来介绍一下这个 OpenJDK 到底是个什么东西。
 
 ### OpenJDK
 
@@ -54,11 +54,11 @@ OpenJDK Community，简单翻译一下，其实就是 OpenJDK 社区，它主要
 
 ![difference](img/difference.jpg)
 
-那接下来我们要介绍的 Loom 以及 Amber 呢，就是我之前提到的 OpenJDK Community 所有的几十个项目中的两个我觉得比较有意思的项目，拿出来和大家分享一下。
+那接下来我们要介绍的 Amber 呢，就是我之前提到的 OpenJDK Community 所有的几十个项目中的我觉得比较有意思的项目之一，拿出来和大家分享一下。
 
 ## Amber 是什么
 
-Project Amber 呢，官方的说法是，旨在为 JDK 提供一些小的改动，使开发者在开发的过程中更为友好。其实用比较人话来解释这个项目就是，语法糖。
+Project Amber 呢，官方的说法是，旨在为 JDK 提供一些小的改动，使开发者在开发的过程中感觉更为友好。其实用比较人话来解释这个项目就是，语法糖。
 
 众所周知呢，Java 的代码呢写起来其实是有点啰嗦的。那有没有办法能让大家开发的过程更加快乐一点呢，其实 Amber 就是来做这件事情的。我来举几个 Amber 已经反哺到正式发行版中的小语法糖。
 
