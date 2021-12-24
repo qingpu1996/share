@@ -278,7 +278,7 @@ that's it，这样就可以了。
 
 ```java
 public record MyRecord(String username,Integer age) {
-privite String gender;
+	privite String gender;
 }
 ```
 
